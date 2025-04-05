@@ -8,7 +8,7 @@
         <div>
             {% block content %}
             <div>
-                {% for post in section.pages | reverse %}
+                {% for post in section.pages %}
                 <h1>
                     <a href="{{ post.permalink }}">{{ post.title | safe }}</a>
                 </h1>
