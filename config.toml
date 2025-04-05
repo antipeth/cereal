@@ -14,3 +14,8 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+menu = [
+    { name = "/posts", url = "/posts", weight = 1 },
+    { name = "/link", url = "/link", weight = 3 },
+    { name = "/about", url = "/about", weight = 4 },
+]
