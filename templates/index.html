@@ -7,6 +7,8 @@
     <body>
         <header>
             <nav>
+                <a
+                  href="{{ get_url(path="atom.xml", trailing_slash=false) }}">/rss</a>
                 {% for menu in config.extra.menu %}
                 <a href="{{ get_url(path=menu.url) }}">{{ menu.name }}</a>
                 {% endfor %}
@@ -24,5 +26,6 @@
             </div>
             {% endblock content %}
         </div>
+
     </body>
 </html>
