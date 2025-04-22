@@ -22,3 +22,5 @@ menu = [
     { name = "/link", url = "/link", weight = 3 },
     { name = "/about", url = "/about", weight = 4 },
 ]
+
+toc = true
