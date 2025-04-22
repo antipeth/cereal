@@ -1,4 +1,5 @@
 # The URL the site will be built for
+author = "atp"
 base_url = "https://example.com"
 title = "cereal theme"
 # Whether to automatically compile all Sass files in the sass directory
