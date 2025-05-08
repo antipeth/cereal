@@ -5,6 +5,8 @@
   --clr-2: #33ff8c;
   --clr-3: #ffc640;
   --clr-4: #e54cff;
+  --bg-color: #000000;
+  --text-color: #fff;
 
   --blur: 1rem;
   --fs: clamp(3rem, 8vw, 7rem);
@@ -16,7 +18,7 @@ body {
   display: grid;
   place-items: center;
   background-color: var(--bg);
-  color: #fff;
+  color: var(--text-color);
   font-family: "Inter", "DM Sans", Arial, sans-serif;
 }
 
@@ -29,6 +31,8 @@ body {
 
 .content {
   text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .title {
@@ -37,7 +41,8 @@ body {
   letter-spacing: var(--ls);
   position: relative;
   overflow: hidden;
-  background: var(--bg);
+  background: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
 }
 
