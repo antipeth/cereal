@@ -1,31 +1,33 @@
 <!doctype html>
 <html lang="{{ lang }}">
-    <head>
-        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-        {% block extra_head %} {% endblock extra_head %}
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a
-                  href="{{ get_url(path="atom.xml", trailing_slash=false) }}">/rss</a>
-                {% for menu in config.extra.menu %}
-                <a href="{{ get_url(path=menu.url) }}">{{ menu.name }}</a>
-                {% endfor %}
-            </nav>
-        </header>
-        <div>
-            {% block content %}
-            <div>
-                {% for post in section.pages %}
-                <h1>
-                    <a href="{{ post.permalink }}">{{ post.title | safe }}</a>
-                </h1>
-                <span>{{ post.date | date(format="%Y-%m-%d") }}</span>
-                {% endfor %}
-            </div>
-            {% endblock content %}
-        </div>
 
-    </body>
+<head>
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    {% block extra_head %} {% endblock extra_head %}
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="{{ get_url(path=" atom.xml", trailing_slash=false) }}">/rss</a>
+            {% for menu in config.extra.menu %}
+            <a href="{{ get_url(path=menu.url) }}">{{ menu.name }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+    <div>
+        {% block content %}
+        <div>
+            {% for post in section.pages %}
+            <h1>
+                <a href="{{ post.permalink }}">{{ post.title | safe }}</a>
+            </h1>
+            <span>{{ post.date | date(format="%Y-%m-%d") }}</span>
+            {% endfor %}
+        </div>
+        {% endblock content %}
+    </div>
+
+</body>
+
 </html>
