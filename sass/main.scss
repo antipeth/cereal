@@ -25,7 +25,16 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+    transition: 
+        background-color 0.3s ease-in-out, 
+        color 0.3s ease-in-out;
+}
+
+* {
+    transition: 
+        background-color 0.3s ease-in-out, 
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
 
 // Mode toggle button
