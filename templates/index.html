@@ -43,7 +43,7 @@
 
             themeToggle.addEventListener('click', () => {
                 htmlElement.classList.toggle('dark-mode');
-                
+
                 // Save theme preference
                 const currentTheme = htmlElement.classList.contains('dark-mode') ? 'light' : 'dark';
                 localStorage.setItem('theme', currentTheme);

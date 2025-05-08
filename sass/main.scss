@@ -2,11 +2,11 @@
     // Light mode colors
     --bg-color-light: #FFFFFF;
     --text-color-light: #000000;
-    
+
     // Dark mode colors
     --bg-color-dark: #1E1E1E;
     --text-color-dark: #FFFFFF;
-    
+
     // Default to dark mode
     --bg-color: var(--bg-color-dark);
     --text-color: var(--text-color-dark);
@@ -18,7 +18,8 @@
     --text-color: var(--text-color-light);
 }
 
-html, body {
+html,
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
