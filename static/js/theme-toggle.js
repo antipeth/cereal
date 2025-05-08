@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.querySelector('.theme-toggle');
-    const htmlElement = document.documentElement;
+  const checkbox = document.getElementById('checkbox');
+  const htmlElement = document.documentElement;
 
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    if (savedTheme === 'light') {
-        htmlElement.classList.add('dark-mode');
-    }
+  // Initial theme setup
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    htmlElement.classList.toggle('dark-mode', savedTheme === 'dark');
+    checkbox.checked = savedTheme === 'dark';
+  }
 
-    themeToggle.addEventListener('click', () => {
-        htmlElement.classList.toggle('dark-mode');
+  checkbox.addEventListener('change', () => {
+    htmlElement.classList.toggle('dark-mode');
 
-        // Save theme preference
-        const currentTheme = htmlElement.classList.contains('dark-mode') ? 'light' : 'dark';
-        localStorage.setItem('theme', currentTheme);
-    });
+    // Save theme preference
+    const currentTheme = htmlElement.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', currentTheme);
+  });
 });

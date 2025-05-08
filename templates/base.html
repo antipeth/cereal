@@ -17,7 +17,16 @@
             {% endfor %}
         </nav>
     </header>
-    <button class="theme-toggle" aria-label="Toggle Theme">Toggle Theme</button>
+    
+    <div class="theme-toggle-container">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <span class="moon-icon"></span>
+            <span class="sun-icon"></span>
+            <span class="ball"></span>
+        </label>
+    </div>
+
     <div>
         {% block content %}
         {% endblock content %}
