@@ -3,14 +3,9 @@
 <div class="content">
     <h1 class="title">
         <div class="keyboard">
-            <span class="key">K</span>
-            <span class="key">E</span>
-            <span class="key">Y</span>
-            <span class="key">B</span>
-            <span class="key">O</span>
-            <span class="key">A</span>
-            <span class="key">R</span>
-            <span class="key">D</span>
+            {% for char in config.title %}
+            <span class="key">{{ char | upper }}</span>
+            {% endfor %}
         </div>
         <div class="aurora">
             <div class="aurora__item"></div>
