@@ -20,14 +20,7 @@
     <button class="theme-toggle" aria-label="Toggle Theme">Toggle Theme</button>
     <div>
         {% block content %}
-        <div>
-            {% for post in section.pages %}
-            <h1>
-                <a href="{{ post.permalink }}">{{ post.title | safe }}</a>
-            </h1>
-            <span>{{ post.date | date(format="%Y-%m-%d") }}</span>
-            {% endfor %}
-        </div>
+
         {% endblock content %}
     </div>
 </body>
