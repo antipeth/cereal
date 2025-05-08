@@ -1,10 +1,10 @@
 // Colors
 :root {
   --bg: #000000;
-  --clr-1: #ef233c;   // Deep azure blue - professional, calm
-  --clr-2: #274c77;   // Muted teal-green - subtle, elegant
-  --clr-3: #5897c1;   // Dark slate gray - sophisticated, modern
-  --clr-4: #83c0f3;   // Deep lavender - refined, slightly mysterious
+  --clr-1: #ef233c; // Deep azure blue - professional, calm
+  --clr-2: #274c77; // Muted teal-green - subtle, elegant
+  --clr-3: #5897c1; // Dark slate gray - sophisticated, modern
+  --clr-4: #83c0f3; // Deep lavender - refined, slightly mysterious
   --bg-color: #000000;
   --text-color: #fff;
 
@@ -213,6 +213,7 @@ body {
 // Mixin for creating press down animations
 @mixin press-down-animation($name, $peak-time, $duration) {
   @keyframes #{$name} {
+
     #{$peak-time - 5%},
     #{$peak-time},
     100% {
