@@ -1,6 +1,7 @@
 :root {
     --post-border-radius: 12px;
     --post-hover-transition: 0.3s ease-in-out;
+    --theme-transition-speed: 0.3s ease-in-out; // Match global theme transition
 }
 
 .post-list {
@@ -20,9 +21,10 @@
     border-radius: var(--post-border-radius);
     padding: 1rem;
     transition: 
+        background-color var(--theme-transition-speed),
         border-color var(--post-hover-transition),
-        box-shadow var(--post-hover-transition),
-        transform var(--post-hover-transition);
+        transform var(--post-hover-transition),
+        color var(--theme-transition-speed);
     
     &:hover {
         border-color: var(--accent-color);
@@ -34,6 +36,7 @@
         margin-top: 0;
         margin-bottom: 0.5rem;
         color: var(--text-color);
+        transition: color var(--theme-transition-speed);
     }
 
     .post-date {
@@ -41,11 +44,15 @@
         color: var(--sophisticated-grey-light);
         margin-bottom: 0.5rem;
         font-size: 0.8em;
+        transition: color var(--theme-transition-speed);
     }
 
     .post-summary {
         color: var(--text-color);
         opacity: 0.8;
+        transition: 
+            color var(--theme-transition-speed),
+            opacity var(--theme-transition-speed);
     }
 }
 
