@@ -4,26 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial theme setup
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    // Explicitly add dark-mode class for dark theme
-    htmlElement.classList.add('dark-mode');
-    checkbox.checked = true;
-  } else {
-    // Explicitly remove dark-mode class for light theme
-    htmlElement.classList.remove('dark-mode');
-    checkbox.checked = false;
-  }
+  const isDark = savedTheme === 'dark';
+  
+  htmlElement.classList.toggle('dark-mode', isDark);
+  checkbox.checked = !isDark;
 
   checkbox.addEventListener('change', () => {
-    // Toggle dark mode based on checkbox state
-    if (checkbox.checked) {
-      // Add dark-mode class when checkbox is checked
-      htmlElement.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      // Remove dark-mode class when checkbox is unchecked
-      htmlElement.classList.remove('dark-mode');
-      localStorage.setItem('theme', 'light');
-    }
+    const newIsDark = !checkbox.checked;
+    htmlElement.classList.toggle('dark-mode', newIsDark);
+    localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
   });
 });
