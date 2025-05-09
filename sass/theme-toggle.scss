@@ -17,22 +17,6 @@
     align-items: center;
 }
 
-.moon-icon,
-.sun-icon {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.moon-icon {
-    color: #111;
-}
-
-.sun-icon {
-    color: #f1c40f;
-}
-
 .checkbox-label .ball {
     background-color: var(--bg-color);
     width: 12px;
