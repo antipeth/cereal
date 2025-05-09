@@ -213,7 +213,6 @@ body {
 // Mixin for creating press down animations
 @mixin press-down-animation($name, $peak-time, $duration) {
   @keyframes #{$name} {
-
     #{$peak-time - 5%},
     #{$peak-time},
     100% {
@@ -230,8 +229,8 @@ body {
 @mixin generate-press-down-animations($max-children: 20) {
   @for $i from 1 through $max-children {
     // Vary peak times and durations for more natural animation
-    $peak-time: percentage($i * 0.1);
-    $duration: 2 + ($i * 0.2);
+    $peak-time: percentage($i * 0.05);  // Reduced from 0.1 to spread animations more evenly
+    $duration: 2 + ($i * 0.15);  // Slightly adjusted duration
 
     @include press-down-animation(pressDown#{$i}, $peak-time, $duration);
 
