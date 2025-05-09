@@ -16,17 +16,16 @@
             <a href="{{ get_url(path=menu.url) }}">{{ menu.name }}</a>
             {% endfor %}
         </nav>
+        <div class="theme-toggle-container">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <span class="moon-icon"></span>
+                <span class="sun-icon"></span>
+                <span class="ball"></span>
+            </label>
+        </div>
     </header>
     
-    <div class="theme-toggle-container">
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="checkbox-label">
-            <span class="moon-icon"></span>
-            <span class="sun-icon"></span>
-            <span class="ball"></span>
-        </label>
-    </div>
-
     <div>
         {% block content %}
         {% endblock content %}
