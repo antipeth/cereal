@@ -17,17 +17,17 @@
     --sophisticated-grey-light: #6B7280;  // Soft, professional grey
     --sophisticated-grey-dark: #9CA3AF;   // Slightly lighter for dark mode
 
-    // Default to dark mode
-    --bg-color: var(--bg-color-dark);
-    --text-color: var(--text-color-dark);
-    --accent-color: var(--sophisticated-grey-dark);
-}
-
-// Dark/Light mode toggle
-.dark-mode {
+    // Default to light mode
     --bg-color: var(--bg-color-light);
     --text-color: var(--text-color-light);
     --accent-color: var(--sophisticated-grey-light);
+}
+
+// Dark mode toggle
+.dark-mode {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --accent-color: var(--sophisticated-grey-dark);
 }
 
 html,
