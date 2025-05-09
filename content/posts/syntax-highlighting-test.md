@@ -11,8 +11,33 @@ fn main() {
     
 ```nix
 {
-    name = "nix";
-    version = "1.0";
-    description = "Nix is a package manager";
+  description = "test nixos flake config";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  };
+
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      host = "test";
+    in
+    {
+      # test
+
+      nixosConfigurations = {
+        "${host}" = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit system;
+            inherit host;
+          };
+          modules = [
+            ./hosts/${host}/config.nix
+          ];
+        };
+      };
+    };
 }
+
 ```
