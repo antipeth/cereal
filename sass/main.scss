@@ -43,25 +43,21 @@ header {
     top: 0;
     z-index: 100;
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: transparent;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     nav {
         display: flex;
         align-items: center;
         gap: 1rem;
-        
+
         a {
             text-decoration: none;
             color: var(--text-color);
             transition: color 0.3s ease-in-out;
-            
-            &:hover {
-                color: var(--accent-color);
-            }
         }
     }
 
@@ -71,7 +67,7 @@ header {
     }
 }
 
-body > div {
+body>div {
     margin-top: 2rem;
     padding: 0 1rem;
 }
