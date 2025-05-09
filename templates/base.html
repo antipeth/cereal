@@ -7,14 +7,11 @@
     <link rel="stylesheet" href="/main.css">
     <script src="/js/theme-toggle.js"></script>
     <script>
-        const userTheme = localStorage.getItem('theme');
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches; 
-        if (userTheme === 'dark' || (!userTheme && systemDark)) {
-          document.documentElement.classList.add('dark-mode');
-        } else {
-          document.documentElement.classList.remove('dark-mode');
-        }
-      </script>
+        document.documentElement.classList.toggle('dark-mode', 
+            localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        );
+    </script>
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     {% block extra_head %} {% endblock extra_head %}
 </head>
