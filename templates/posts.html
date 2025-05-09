@@ -1,0 +1,20 @@
+{% extends "section.html" %}
+{% block section_content %}
+{% if section.pages %}
+<div class="post-list">
+    {% for post in section.pages %}
+    <article>
+        <h2>
+            <a href="{{ post.permalink }}">{{ post.title | safe }}</a>
+        </h2>
+        <span class="post-date">{{ post.date | date(format="%Y-%m-%d") }}</span>
+        {% if post.summary %}
+        <p class="post-summary">{{ post.summary | safe }}</p>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+{% else %}
+<p>No posts available yet.</p>
+{% endif %}
+{% endblock section_content %}

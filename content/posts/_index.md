@@ -2,7 +2,7 @@
 title = "Posts"
 weight = 1
 sort_by = "date"
-template = "section.html"
+template = "posts.html"
 page_template = "page.html"
 +++
 
