@@ -10,15 +10,21 @@
     --bg-color-dark: #1E1E1E;
     --text-color-dark: #FFFFFF;
 
+    // Sophisticated grey colors
+    --sophisticated-grey-light: #6B7280;  // Soft, professional grey
+    --sophisticated-grey-dark: #9CA3AF;   // Slightly lighter for dark mode
+
     // Default to dark mode
     --bg-color: var(--bg-color-dark);
     --text-color: var(--text-color-dark);
+    --accent-color: var(--sophisticated-grey-dark);
 }
 
 // Dark/Light mode toggle
 .dark-mode {
     --bg-color: var(--bg-color-light);
     --text-color: var(--text-color-light);
+    --accent-color: var(--sophisticated-grey-light);
 }
 
 html,
@@ -72,5 +78,30 @@ header>div {
 a {
     text-decoration: none;
     color: var(--text-color);
-    transition: color 0.3s ease-in-out;
+    position: relative;
+    transition: 
+        color 0.3s ease-in-out,
+        transform 0.2s ease;
+    
+    &:hover {
+        color: var(--accent-color);  // Using the sophisticated grey
+        transform: scale(1.05);  // Subtle scale effect on hover
+    }
+
+    // Underline effect
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -3px;
+        left: 0;
+        background-color: var(--accent-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
 }
