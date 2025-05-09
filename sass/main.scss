@@ -28,6 +28,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
+    font-size: 56px;
     transition:
         background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
@@ -46,10 +47,11 @@ header {
     z-index: 100;
     width: 100%;
     background-color: transparent;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    gap: 1rem;
 
     nav {
         display: flex;
@@ -69,7 +71,7 @@ header {
     }
 }
 
-body>div {
-    margin-top: 2rem;
-    padding: 0 1rem;
+header>div {
+    margin-top: 0rem;
+    padding: 0 0.1rem;
 }
