@@ -1,0 +1,86 @@
+// Modern Code Block Styling with Dark/Light Mode Support
+:root {
+    // Light mode colors
+    --code-bg-light: #f4f4f4;
+    --code-text-light: #333;
+    --code-border-light: rgba(0, 0, 0, 0.1);
+    --code-shadow-light: rgba(0, 0, 0, 0.05);
+    
+    // Dark mode colors
+    --code-bg-dark: #1e1e1e;
+    --code-text-dark: #d4d4d4;
+    --code-border-dark: rgba(255, 255, 255, 0.1);
+    --code-shadow-dark: rgba(0, 0, 0, 0.2);
+    
+    // Copy button colors
+    --copy-btn-bg-light: #e0e0e0;
+    --copy-btn-text-light: #333;
+    --copy-btn-hover-light: #d0d0d0;
+    
+    --copy-btn-bg-dark: #2c2c2c;
+    --copy-btn-text-dark: #ffffff;
+    --copy-btn-hover-dark: #3c3c3c;
+}
+
+pre {
+    position: relative;
+    background-color: var(--code-bg-light);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    line-height: 1.6;
+    border: 1px solid var(--code-border-light);
+    box-shadow: 0 4px 6px var(--code-shadow-light);
+    color: var(--code-text-light);
+
+    code {
+        background-color: transparent;
+        padding: 0;
+        font-size: 0.9rem;
+        color: inherit;
+    }
+}
+
+// Dark mode support
+body.dark-mode {
+    pre {
+        background-color: var(--code-bg-dark);
+        border-color: var(--code-border-dark);
+        box-shadow: 0 4px 6px var(--code-shadow-dark);
+        color: var(--code-text-dark);
+    }
+}
+
+// Copy Button Styling
+.copy-code-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--copy-btn-bg-light);
+    color: var(--copy-btn-text-light);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--copy-btn-hover-light);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+// Dark mode copy button
+body.dark-mode .copy-code-button {
+    background-color: var(--copy-btn-bg-dark);
+    color: var(--copy-btn-text-dark);
+
+    &:hover {
+        background-color: var(--copy-btn-hover-dark);
+    }
+}
