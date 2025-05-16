@@ -1,0 +1,34 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+
+    .pagination-group {
+        display: flex;
+        gap: 0.5rem;
+        min-width: 0;  // 防止内容挤压
+    }
+
+    .previous {
+        margin-left: 0;
+    }
+
+    .next {
+        margin-right: 0;
+    }
+
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: var(--bg-secondary);
+        }
+    }
+}

@@ -1,8 +1,8 @@
 {% extends "section.html" %}
 {% block section_content %}
-{% if section.pages %}
+{% if paginator.pages %}
 <div class="post-list">
-    {% for post in section.pages %}
+    {% for post in paginator.pages %}
     <a href="{{ post.permalink }}" class="post-link">
         <article>
             <h2>{{ post.title | safe }}</h2>
@@ -14,6 +14,18 @@
     </a>
     {% endfor %}
 </div>
+<nav class="pagination">
+    <div class="pagination-group">
+        {% if paginator.previous %}
+        <a class="previous" href="{{ paginator.previous }}">←</a>
+        {% endif %}
+    </div>
+    <div class="pagination-group">
+        {% if paginator.next %}
+        <a class="next" href="{{ paginator.next }}">→</a>
+        {% endif %}
+    </div>
+</nav>
 {% else %}
 <p>No posts available yet.</p>
 {% endif %}
