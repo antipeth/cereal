@@ -9,5 +9,12 @@
         </div>
     </h1>
     <p class="subtitle">{{ config.description }}</p>
+    <div class="social-links">
+        {% for link in config.extra.social | sort(attribute="weight") %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+            {{ link.name }}
+        </a>
+        {% endfor %}
+    </div>
 </div>
 {% endblock content %}
