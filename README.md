@@ -9,14 +9,14 @@
 * **Dark/Light Mode**: Built-in toggle with system preference detection and smooth transitions.
 * **RSS Feed**: Automatic RSS feed generation.
 * **Fewer Customization**: Easily define menus and external links in `config.toml`.
-* **Fewer Components**: Only essential components are included,no pictures.
+* **Fewer Components**: Only essential components are included, no pictures.
 * **Syntax Highlighting**: Integrated code highlighting using [Highlight.js](https://highlightjs.org/).
 * **Pagination**: Automatic pagination support for long post lists.
 ---
 
 ### Installation
 
-1. **Clone the theme** into your Zola project’s `themes` directory:
+1. **Clone the theme** into your Zola project's `themes` directory:
 
    ```bash
    git clone https://github.com/antipeth/cereal.git themes/cereal
