@@ -1,4 +1,3 @@
-// 表格基础样式
 table {
     width: 100%;
     border-collapse: separate;
@@ -22,20 +21,17 @@ th {
     background-color: var(--bg-secondary);
 }
 
-// 表格边框颜色
 table,
 th,
 td {
     border-color: var(--text-color);
 }
 
-// 去掉最后一个单元格的右边框
 td:last-child,
 th:last-child {
     border-right: none;
 }
 
-// 响应式表格
 @media (max-width: 768px) {
     table {
         display: block;
@@ -43,12 +39,10 @@ th:last-child {
     }
 }
 
-// 奇偶行样式
 tr:nth-child(even) {
     background-color: var(--bg-secondary);
 }
 
-// 表格内链接样式
 table a {
     color: var(--accent-color);
     text-decoration: none;
