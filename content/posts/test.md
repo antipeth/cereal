@@ -1,6 +1,7 @@
 +++
 title = "This is a test article"
 date = 2025-04-05
+description = "Getting started with cereal theme."
 +++
 # This is h1
 ## This is h2
