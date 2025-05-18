@@ -2,8 +2,8 @@ name = "cereal"
 description = "A classic blog theme"
 # An optional tags to allow quick search
 tags = []
-license = "MIT"
-homepage = "https://github.com/getzola/hyde"
+license = "BSD 2-Clause License"
+homepage = "https://github.com/antipeth/cereal"
 # The minimum version of Zola required
 min_version = "0.4.0"
 # An optional live demo URL
@@ -17,12 +17,6 @@ demo = ""
 
 # The theme author info: you!
 [author]
-name = "Vincent Prouillet"
-homepage = "https://vincent.is"
+name = "antipeth"
+homepage = "https://blog.0pt.icu"
 
-# If this is porting a theme from another static site engine, provide
-# the info of the original author here
-[original]
-author = "mdo"
-homepage = "https://markdotto.com/"
-repo = "https://www.github.com/mdo/hyde"
