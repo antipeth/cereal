@@ -19,7 +19,10 @@
 1. **Clone the theme** into your Zola project's `themes` directory:
 
    ```bash
-   git clone https://github.com/antipeth/cereal.git themes/cereal
+   git submodule add https://github.com/antipeth/cereal.git themes/cereal
+   cp -r themes/cereal/content .
+   rm config.toml
+   cp themes/cereal/config.toml .
    ```
 2. **Activate the theme** in your `config.toml`:
 
