@@ -2,7 +2,7 @@
 author = "atp"
 base_url = "https://example.com"
 title = "cereal theme"
-description = "A classic blog theme"
+description = "A simple blog theme designed for personal blogs"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 minify_html = true

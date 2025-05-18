@@ -1,5 +1,5 @@
 name = "cereal"
-description = "A classic blog theme"
+description = "A simple blog theme designed for personal blogs"
 # An optional tags to allow quick search
 tags = []
 license = "BSD 2-Clause License"
