@@ -40,6 +40,10 @@
    cd themes/cereal
    git pull
    ```
+### Tips
+
+* Put your `favicon.ico` in the `static` directory.The path like `static/favicon.ico`.
+
 ### To do
 
 * Add search
