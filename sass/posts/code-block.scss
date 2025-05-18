@@ -22,25 +22,20 @@
     --copy-btn-hover-dark: #3c3c3c;
 }
 
-// Responsive code block container
-.content {
-
-    // Ensure code blocks do not break layout
-    pre {
-        width: 100%;
-        max-width: 100%;
-        margin: 1rem 0;
-        overflow-x: auto;
-        box-sizing: border-box;
-
-        // Prevent horizontal scrollbar from causing layout shifts
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-        scrollbar-color: var(--code-border-light) transparent;
-    }
-}
-
 pre {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    overflow-x: auto;
+    box-sizing: border-box;
+    display: block;
+    white-space: pre;
+
+    // Prevent horizontal scrollbar from causing layout shifts
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--code-border-light) transparent;
+
     position: relative;
     background-color: var(--code-bg-light);
     border-radius: 8px;

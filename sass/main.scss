@@ -41,7 +41,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
-    font-size: 56px;
+    font-size: 24px;
     transition:
         background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
@@ -58,7 +58,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 3rem;
     gap: 1.5rem;
 
     nav {
