@@ -25,8 +25,8 @@
 pre {
     width: 100%;
     max-width: 100%;
-    margin: 1rem 0;
-    overflow-x: auto;
+    margin: 1rem auto; // 居中代码块
+    overflow-x: auto; // 启用水平滚动
     box-sizing: border-box;
     display: block;
     white-space: pre;
@@ -46,26 +46,23 @@ pre {
     box-shadow: 0 4px 6px var(--code-shadow-light);
     color: var(--code-text-light);
 
-    code {
-        background-color: transparent;
-        padding: 0;
-        font-size: 0.9rem;
-        color: inherit;
+    max-width: 90vw; // 限制代码块宽度为屏幕宽度的 90%
+}
 
-        // Ensure code wraps or scrolls appropriately
-        word-break: normal;
-        word-wrap: break-word;
-        white-space: pre-wrap;
+code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.9rem;
+    color: inherit;
 
-        // Fallback for very long lines or complex code
-        overflow-wrap: break-word;
-        hyphens: auto;
+    // Ensure code wraps or scrolls appropriately
+    word-break: normal;
+    word-wrap: break-word;
+    white-space: pre;
 
-        // Ensure minimum readability
-        min-width: 0;
-        max-width: 100%;
-        display: block;
-    }
+    // 长行代码启用水平滚动
+    overflow-x: auto;
+    display: inline-block;
 }
 
 // Dark mode support
