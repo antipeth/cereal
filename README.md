@@ -37,8 +37,9 @@
 4. **Update theme**
 
    ```bash
-   cd themes/cereal
-   git pull
+   git submodule update --init --recursive # first time to execute
+   git submodule sync 
+   git submodule update --remote
    ```
 ### Tips
 
