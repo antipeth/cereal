@@ -1,0 +1,60 @@
+:root {
+    // Light mode colors for short code
+    --shortcode-bg-light: #f8f8f8;
+    --shortcode-text-light: #333;
+    --shortcode-border-light: #e0e0e0;
+    --shortcode-shadow-light: rgba(0, 0, 0, 0.05);
+
+    // Dark mode colors for short code
+    --shortcode-bg-dark: #2d2d2d;
+    --shortcode-text-dark: #e0e0e0;
+    --shortcode-border-dark: #404040;
+    --shortcode-shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+// Inline code styling
+:not(pre) > code {
+    background-color: var(--shortcode-bg-light);
+    color: var(--shortcode-text-light);
+    padding: 0.2em 0.4em;
+    margin: 0 0.2em;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    border: 1px solid var(--shortcode-border-light);
+    box-shadow: 0 1px 2px var(--shortcode-shadow-light);
+    white-space: nowrap;
+    vertical-align: middle;
+    
+    // Add subtle transition
+    transition: 
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+
+    // Prevent word break
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+// Dark mode support for short code
+body.dark-mode {
+    :not(pre) > code {
+        background-color: var(--shortcode-bg-dark);
+        color: var(--shortcode-text-dark);
+        border-color: var(--shortcode-border-dark);
+        box-shadow: 0 1px 2px var(--shortcode-shadow-dark);
+    }
+}
+
+// Mobile optimization
+@media (max-width: 768px) {
+    :not(pre) > code {
+        padding: 0.15em 0.3em;
+        font-size: 0.85em;
+        margin: 0 0.1em;
+        // Allow wrapping on very small screens
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
