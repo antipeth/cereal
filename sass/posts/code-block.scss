@@ -46,6 +46,12 @@ pre {
     border: 1px solid var(--code-border-light);
     box-shadow: 0 4px 6px var(--code-shadow-light);
     color: var(--code-text-light);
+
+    cursor: pointer; // Add clickable cursor style
+
+    &:hover {
+        opacity: 0.95; // Add subtle hover effect
+    }
 }
 
 code {
@@ -59,7 +65,7 @@ code {
     word-wrap: break-word;
     white-space: pre;
 
-    // 长行代码启用水平滚动
+    // Enable horizontal scrolling for long lines of code
     overflow-x: auto;
     display: inline-block;
 }
@@ -88,24 +94,35 @@ body.dark-mode {
 }
 
 .copied-tooltip {
-    position: absolute;
+    position: absolute; // Use absolute positioning
     background-color: #333;
     color: #fff;
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.8rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, -100%); // 调整提示位置
-    pointer-events: none; // 防止鼠标与提示交互
+    transform: translate(-50%, -100%); // Adjust tooltip position above mouse click
+    pointer-events: none;
     z-index: 1000;
-    animation: fade-out 2s forwards; // 添加淡出动画
+    opacity: 1; // Default visibility
 }
 
-@keyframes fade-out {
+@keyframes fadeInOut {
     0% {
         opacity: 1;
+        transform: translate(-50%, -100%);
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -120%);
     }
     100% {
         opacity: 0;
+        transform: translate(-50%, -120%);
     }
+}
+
+// Add animation class for tooltip
+.show-tooltip {
+    animation: fadeInOut 1.5s ease-out forwards;
 }
