@@ -20,7 +20,18 @@
   margin: 0;
 }
 
-// .subtitle {}
+.subtitle {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 600px; // Limit max width for better readability
+  padding: 0 1rem; // Add some padding for mobile devices
+
+  @media (max-width: 768px) {
+    font-size: 1rem; // Slightly smaller font on mobile
+  }
+}
 
 // Mixin for creating press down animations
 @mixin press-down-animation($name, $peak-time, $duration) {
