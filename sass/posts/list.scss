@@ -1,0 +1,26 @@
+// List item styling
+ul,
+ol {
+    padding-left: 2rem;
+    margin: 1rem 0;
+
+    li {
+        margin: 0.5rem 0;
+        line-height: 1.6;
+        word-wrap: break-word;        // Enable word wrapping
+        overflow-wrap: break-word;    // Modern browsers word wrapping
+        hyphens: auto;               // Add hyphens for better readability
+        
+        @media screen and (max-width: 768px) {
+            line-height: 1.5;        // Slightly reduce line height on mobile
+        }
+    }
+}
+
+// Nested list styling
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0.5rem 0;              // Adjust spacing for nested lists
+}
