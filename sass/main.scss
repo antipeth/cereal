@@ -110,7 +110,7 @@ header {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline !important;;
     color: var(--text-color);
     transition:
         color 0.3s ease-in-out,
