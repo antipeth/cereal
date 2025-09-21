@@ -71,3 +71,21 @@ alert(message);
 ## Inline code
 
 This web site is using `markedjs/marked`.
+
+## Mermaid integrate
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+{% mermaid() %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% end %}
