@@ -19,6 +19,11 @@
     </script>
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    {% if config.extra.tracking_scripts %}
+    {% for script in config.extra.tracking_scripts %}
+    {{ script | safe }}
+    {% endfor %}
+    {% endif %}
     {% block extra_head %} {% endblock extra_head %}
 </head>
 

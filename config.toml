@@ -32,3 +32,7 @@ social = [
     { name = "matrix", url = "https://matrix.to/", weight = 3 },
 ]
 toc = true
+tracking_scripts = [
+  '<script defer src="https://umami.example.com/script.js" data-website-id="xxxx"></script>',
+  '<script data-goatcounter="https://goatcounter.example.com/count" async src="//goatcounter.example.com/count.js"></script>',
+]
