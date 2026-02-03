@@ -12,6 +12,7 @@
 * **Fewer Components**: Only essential components are included, no pictures.
 * **Syntax Highlighting**: Integrated code highlighting using [Highlight.js](https://highlightjs.org/).
 * **Pagination**: Automatic pagination support for long post lists.
+* **Tracking Scripts**: Support for custom analytics scripts (Umami, GoatCounter, etc.).
 ---
 
 ### Installation
@@ -90,6 +91,10 @@ social = [
     { name = "matrix", url = "https://matrix.to/", weight = 3 },
 ]
 toc = true
+tracking_scripts = [
+  '<script defer src="https://umami.example.com/script.js" data-website-id="xxxx"></script>',
+  '<script data-goatcounter="https://goatcounter.example.com/count" async src="//goatcounter.example.com/count.js"></script>',
+]
 ```
 
 ---
